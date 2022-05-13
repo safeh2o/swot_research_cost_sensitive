@@ -240,21 +240,22 @@ vars=['frc','swot'] #two input variable shorthands: FRC means FRC and Time ony, 
 # water temperature - results for this combination are in the SI
 short_sites=['Bdesh','Tanz']
 cost_functions=['mse','nse','kge','ai']
-weights=[0,2,4,6]
+weights=[0,1,2,3]
 IVS=['frc','swot']
 nodes=np.array([[16,4],[16,8]]) #Number of hidden nodes selected for each site+variable combination, selection of the
 # network architecture is in the SI
 training_fraction=np.array([[1/3,1/3,1/3],[1/3,1/3,1/3]])
+path=path #Important - put the path to the dataset here!
 
 
 for s in range (0,len(sites)):
     for v in range (1,len(vars)):
         if v==0:
-            df = pd.read_csv() #Important - put the path to the dataset in the brackets!
+            df = pd.read_csv(path+"\\"+sites[s]+"_Out.csv") 
             df = pd.concat([df['se1_frc'], df['se4_lag'], df['se4_frc']], axis=1)
             df = df.dropna()
         else:
-            df = pd.read_csv() #Important - put the path to the dataset in the brackets!
+            df = pd.read_csv(path+"\\"+sites[s]+"_Out.csv") 
             df = pd.concat([df['se1_frc'], df['se4_lag'], df['se1_cond'], df['se1_wattemp'], df['se4_frc']], axis=1)
             df=df.dropna()
         X = df.drop(['se4_frc'], axis=1)
