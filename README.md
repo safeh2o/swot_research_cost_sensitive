@@ -20,4 +20,4 @@ To run the code:
 2. Run the "ErrorWeightingInvestigation.py" code first - this will train and test all of the ANN ensemble forecasting systems and save the model outputs in subfolders for each alternative.
 3. Run the "ErrorInvestigation_ExperimentFigs.py". This will make some figures in the subfolder for each model an will output a .csv file in the main directory entitled "Super_Array_Results.csv". This will contain all of the ensemble verification scores for all alternatives (without skill scores as these can be easily calculated in excel).
 
-In addition to the above code, we have provided a dataset "Tanzania_Out.csv" which is the Tanzania dataset referenced in the paper. The Bangladesh dataset is currently under embargo but can be made available upon reasonable request.
+In addition to the above code, we have provided both datasets referenced in the paper. Currently it uses the Tanzania dataset, to change this, change 
