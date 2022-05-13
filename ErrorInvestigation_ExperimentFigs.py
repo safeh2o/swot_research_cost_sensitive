@@ -33,9 +33,9 @@ Ensemble_Size=200
 
 exp_names=[]
 
-for a in range (0,3):
-    for b in range(0,5):
-        for c in range (0,7):
+for a in range (0,2):
+    for b in range(0,4):
+        for c in range (0,4):
             for d in range(0,2):
                 exp=sites[a] + '_' + costs[b] + '_w' + str(weights[c]) + '_' + vars[d] + 'time'
                 exp_names.append(exp)
@@ -47,12 +47,12 @@ Bdesh SWOT: 244
 Tanz FRC: 77
 Tanz SWOT: 23
 '''
-sizes=np.array([[533,77,54],[243,23,54]])
+sizes=np.array([[533,77],[243,23]])
 test_lengths=[]
 
-for a in range (0,3):
-    for b in range(0,5):
-        for c in range (0,7):
+for a in range (0,2):
+    for b in range(0,4):
+        for c in range (0,4):
             for d in range(0,2):
                 test_lengths=np.append(test_lengths,sizes[d,a])
 
